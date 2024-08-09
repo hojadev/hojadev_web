@@ -1,9 +1,9 @@
 import Socials from "@/components/common/Socials";
 import Image from "next/image";
 
-export default function Hero() {
+export default function HeroAbout() {
     return(
-        <section className="flex flex-col items-center w-[80%] md:w-[100%]">
+        <section className="flex flex-col items-center my-8 md:my-24">
             <Image 
             src="/hero.png"
             width={360}
@@ -12,9 +12,8 @@ export default function Hero() {
             className="rounded-full mt-[52px]"
             />
             <div className="flex flex-col items-center md:gap-2 mt-2 justify-center text-wrap">
+                <h1 className="text-4xl md:text-5xl font-extrabold gradient-title">HOJA.DEV</h1>
                 <p className="text-3xl md:text-4xl font-extralight italic">Fernando Zaguirre</p>
-                <h1 className="text-4xl md:text-5xl font-extrabold gradient-title">DESARROLLO FULLSTACK</h1>
-                <p className="text-3xl md:text-4xl font-extralight italic">Paginas y Aplicaciones Web</p>
             </div>
             <Socials/>
         </section>
