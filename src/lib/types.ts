@@ -4,11 +4,17 @@ export interface BottonCardProps {
     href: string;
 }
 
-export interface CardInfo {
+export interface CardInfoProps {
     src: string;
     alt: string;
     text: string;
     link: string;
 }
 
+export interface ContactForm {
+    nombre: string;
+    email: string;
+    asunto: string;
+    message: string;
+}
 //cardInfo:{src: string, alt: string, text: string, link: string} 

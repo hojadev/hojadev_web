@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { CardInfo } from "@/lib/types";
+import { CardInfoProps } from "@/lib/types";
 import ButtonCard from "./ButtonCard";
 
-export default function ProyectCard({src,alt,text,link} : CardInfo){
+export default function ProyectCard({src,alt,text,link} : CardInfoProps){
     return (
         <article className="flex flex-col items-center justify-between h-[450px]">
             <Image
@@ -13,7 +13,7 @@ export default function ProyectCard({src,alt,text,link} : CardInfo){
             className="rounded-xl shadow-sm"
             />
             <p className="text-secondary-color w-[270px] text-xl font-light">{text}</p>
-            <ButtonCard isDark={true} text="Ir a la Web" href="www.google.com"/>
+            <ButtonCard isDark={true} text="Ir a la Web" href={link}/>
         </article>
     )
 }

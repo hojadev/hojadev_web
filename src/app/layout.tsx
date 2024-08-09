@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/layout/navbar/Navbar"
 import {workSans} from './fonts';
 import "./globals.css";
+import Footer from "@/components/layout/footer/Footer";
 
 
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={`${workSans.className} bg-secondary-color`}>
         <Navbar/>
         {children}
+        <Footer/>
         </body>
     </html>
   );

@@ -23,7 +23,7 @@ export default function Services(){
             </div>
 
             <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-40 m-auto md:w-[80%] lg:w-[70%] xl:w-[50%] justify-center items-center">
-                <div className="w-[50%]">
+                <div className="lg:w-[50%] md:w-[70%]">
                     <h3 className="text-title text-4xl ">Aplicaciones Web</h3>
                     <p className="text-xl font-extralight">
                     Aplicaciones web de gestion para tu negocio, o cualquier idea que tengas cotizala con nosotros para poder llevarla a la realidad.
