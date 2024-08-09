@@ -13,6 +13,25 @@ export default function Contact(){
         message:""
     })
 
+    const sendEmail = async (e : React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        console.log(formData)
+        try{
+            const res = await fetch("/api/sendEmail", {
+                method:"POST",
+                headers:{
+                    "Content-Type": "application/json",
+                },
+                body:JSON.stringify(formData)
+            })
+
+            const data = await res.json();
+            console.log(data)
+        } catch(err) {
+            console.log(err)
+        }
+        }
+
     const captureValues = (e : React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) : void => {
         e.preventDefault()
         const target = e.target as HTMLInputElement | HTMLTextAreaElement;
@@ -29,7 +48,7 @@ export default function Contact(){
     return(
         <section className="flex flex-row gap-36 items-center justify-center mb-24 flex-wrap md:flex-nowrap">
             <div className="md:w-[60%]  md:mx-0">
-                <form onSubmit={handleForm} className="flex flex-col gap-4">
+                <form onSubmit={sendEmail} className="flex flex-col gap-4">
                     <div className="flex flex-col">
                         <label htmlFor="nombre" className="text-xl">Nombre</label>
                         <input type="text" name="nombre" onChange={captureValues} placeholder="Ingresa tu nombre..." className="h-8 rounded-md p-4 text-secondary-color bg-color-primary"/>
