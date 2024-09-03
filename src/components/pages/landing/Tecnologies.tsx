@@ -13,6 +13,10 @@ export default function Tecnologies(){
                 <Image width={50} height={50} alt="Icon" src={'/React.svg'}/>
                 <Image width={50} height={50} alt="Icon" src={'/TailwindCSS.svg'}/>
                 <Image width={50} height={50} alt="Icon" src={'/TypeScript.svg'}/>
+                <Image width={80} height={80} alt="Icon" src={'/mysql.svg'}/>
+                <Image width={60} height={60} alt="Icon" src={'/html.svg'}/>
+                <Image width={50} height={50} alt="Icon" src={'/css.svg'}/>
+                <Image width={50} height={50} alt="Icon" src={'/express.svg'}/>
             </div>
         </section>
     )

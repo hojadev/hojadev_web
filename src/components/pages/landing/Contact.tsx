@@ -31,7 +31,7 @@ export default function Contact(){
     return(
         <section className="flex flex-col-reverse md:flex-row gap-36 items-center justify-center md:mb-16 flex-wrap md:flex-nowrap">
             <ToastContainer />
-            <div className="w-full mx-2 md:w-[60%]  md:mx-0">
+            <div className="w-[90%] mx-2 md:w-[60%]  md:mx-0">
                 <form onSubmit={handleFormContact} className="flex flex-col gap-4">
                     <div className="flex flex-col">
                         <label htmlFor="nombre" className="text-xl">Nombre</label>
@@ -43,7 +43,7 @@ export default function Contact(){
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="tel" className="text-xl">telefono</label>
-                        <input type="tel" required name="tel" onChange={captureValues} placeholder="56933333333" className="h-8 rounded-md p-4 text-secondary-color bg-color-primary" />
+                        <input type="tel" required name="tel" onChange={captureValues} placeholder="+56 9 33333333" className="h-8 rounded-md p-4 text-secondary-color bg-color-primary" />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="asunto" className="text-xl">Asunto</label>
