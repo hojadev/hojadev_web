@@ -29,9 +29,9 @@ export default function Contact(){
     }
 
     return(
-        <section className="flex flex-row gap-36 items-center justify-center mb-24 flex-wrap md:flex-nowrap">
+        <section className="flex flex-col-reverse md:flex-row gap-36 items-center justify-center md:mb-16 flex-wrap md:flex-nowrap">
             <ToastContainer />
-            <div className="w-full mx-4 md:w-[60%]  md:mx-0">
+            <div className="w-full mx-2 md:w-[60%]  md:mx-0">
                 <form onSubmit={handleFormContact} className="flex flex-col gap-4">
                     <div className="flex flex-col">
                         <label htmlFor="nombre" className="text-xl">Nombre</label>
