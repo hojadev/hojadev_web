@@ -12,6 +12,14 @@ import Image from "next/image"
 import { Suspense } from "react"
 
 export default function Blog(){
+    return (
+        <Suspense fallback={<LoadingScreen/>}>
+            <BlogContent/>
+        </Suspense>
+    )
+}
+
+function BlogContent(){
 
     const [posts, SetPosts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -24,42 +32,42 @@ export default function Blog(){
     // Construir la URL completa
     const [fullUrl,setFullUrl] = useState(`${pathname}?${searchParams.toString()}`);
 
-    
-    useEffect( () => {
-        const handleGetPosts = async() => {
-            try{
-                setLoading(true)
-                let postsData = await getPosts()
-                console.log(searchName)
-                if (category && category !== 'ALL') {
-                    postsData = postsData.filter((post: PostData) => post.category === category);
-                }
-        
-                if (searchName && searchName.trim()) {
-                    postsData = postsData.filter((post: PostData) =>
-                        post.title.toLowerCase().includes(searchName.toLowerCase())
-                    );
-                }
-                SetPosts(postsData)
-            } catch(err) {
-                console.error(err)
-            } finally {
-                setLoading(false)
+
+    const handleGetPosts = async() => {
+        try{
+            setLoading(true)
+            let postsData = await getPosts()
+            console.log(searchName)
+            if (category && category !== 'ALL') {
+                postsData = postsData.filter((post: PostData) => post.category === category);
             }
-            
+    
+            if (searchName && searchName.trim()) {
+                postsData = postsData.filter((post: PostData) =>
+                    post.title.toLowerCase().includes(searchName.toLowerCase())
+                );
+            }
+            SetPosts(postsData)
+        } catch(err) {
+            console.error(err)
+        } finally {
+            setLoading(false)
         }
+
+    }
+    const captureValues = (e : React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) : void => {
+        e.preventDefault()
+        const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+        
+        setSearchText({...searchText, [target.name]:target.value})
+        console.log(searchText)
+    }
+
+    useEffect( () => {
         handleGetPosts()
         console.log(fullUrl)
         setFullUrl(`${pathname}?${searchParams.toString()}`)
     }, [category, fullUrl])
-    
-        const captureValues = (e : React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) : void => {
-            e.preventDefault()
-            const target = e.target as HTMLInputElement | HTMLTextAreaElement;
-            
-            setSearchText({...searchText, [target.name]:target.value})
-            console.log(searchText)
-        }
     return (
         <Suspense fallback={<LoadingScreen/>}>
             <main className="flex flex-col justify-center items-center">
