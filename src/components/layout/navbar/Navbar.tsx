@@ -16,7 +16,10 @@ export default function Navbar(){
     return(
     <header className="flex justify-center sticky top-0 z-50 bg-secondary-color">
         <nav className="flex flex-row justify-between items-center w-[100%] md:w-[90%] lg:w-[70%] my-4 sticky top-0 z-50">
-            <h2 className="text-primary-color mr-2 mx-2 md:mr-0 text-3xl md:text-5xl font-extrabold">HOJA.DEV</h2>
+            <div className="flex flex-row justify-center items-center gap-2">
+                <h2 className="text-primary-color mr-2 mx-2 md:mr-0 text-3xl md:text-5xl font-extrabold">HOJA.DEV</h2>
+                <Image width={45} height={45} src={'/logo_light.svg'} alt="Logo De Hoja Dev" className="mb-1"/>
+            </div>
 
             <Image 
             width={50} 

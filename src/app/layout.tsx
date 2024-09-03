@@ -19,6 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
+      <link rel="shortcut icon" href="/logo-favicon.svg" type="image/x-icon" />
       <body className={`${workSans.className} bg-secondary-color`}>
         <Navbar/>
         {children}
