@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CardInfoProps } from "@/lib/types";
 import ButtonCard from "./ButtonCard";
 
-export default function ProyectCard({src,alt,text,link, linkGithub, descripcion} : CardInfoProps){
+export default function ProjectCard({src,alt,text,link, linkGithub, descripcion} : CardInfoProps){
     return (
         <article className="flex flex-col items-center justify-between h-[500px] w-[80%] md:w-full gap-8">
             <Image

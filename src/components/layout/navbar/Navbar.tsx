@@ -9,10 +9,6 @@ export default function Navbar(){
     const pathname = usePathname()
     const [toggleMenu, setToggleMenu]= useState(false)
 
-    useEffect( () => {
-        console.log(pathname)   
-    })
-
     return(
     <header className="flex justify-center sticky top-0 z-50 bg-secondary-color">
         <nav className="flex flex-row justify-between items-center w-[100%] md:w-[90%] lg:w-[70%] my-4 sticky top-0 z-50">

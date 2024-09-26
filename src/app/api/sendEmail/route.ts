@@ -1,5 +1,3 @@
-import { ContactForm } from '@/lib/types';
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from "nodemailer"
 

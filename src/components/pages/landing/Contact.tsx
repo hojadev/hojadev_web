@@ -1,9 +1,8 @@
 'use client'
 import Socials from "@/components/common/Socials";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { ContactForm } from "@/lib/types";
-import { ToastContainer, toast } from 'react-toastify';
+import { useState } from "react";
+import { ToastContainer } from 'react-toastify';
 import { sendEmail } from "@/lib/api";
 
 export default function Contact(){
@@ -19,7 +18,7 @@ export default function Contact(){
     const handleFormContact = async (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         await sendEmail(formData)
-        }
+    }
 
     const captureValues = (e : React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) : void => {
         e.preventDefault()
