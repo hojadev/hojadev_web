@@ -3,7 +3,6 @@ import Hero from "../components/pages/landing/Hero"
 import Contact from "@/components/pages/landing/Contact";
 import Tecnologies from "@/components/pages/landing/Tecnologies";
 import { workSans } from "./fonts";
-
 import 'react-toastify/dist/ReactToastify.css';
 import Projects from "@/components/pages/landing/Projects";
 
