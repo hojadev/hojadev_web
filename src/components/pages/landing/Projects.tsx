@@ -21,7 +21,7 @@ export default function Projects() {
                         alt="Ejemplo de Landing Page"
                         descripcion="Landing page para una empresa de seguridad de camiones"
                         text="Ejemplo de landing page para empresa de seguridad"
-                        link="https://https:www.byfspa.cl"
+                        link="https://www.byfspa.cl"
                         linkGithub="https://github.com/hojadev/"
                     />
                     {/* <ProyectCard src="/proyect_2.png" alt="Ejemplo de Landing Page" text="Landing para la empresa XXXXX para lanzamiento de producto" link="www.google.com "/> */}
